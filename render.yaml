@@ -1,0 +1,14 @@
+git add render.yaml
+git commit -m "Add render.yaml"
+git push # Exported from Render on 2025-07-03T22:22:07Z
+services:
+- type: web
+  name: ELITE-PRO-V2
+  runtime: docker
+  repo: https://github.com/Impec-cable/ELITE-PRO-V2
+  plan: free
+  region: oregon
+  dockerContext: .
+  dockerfilePath: ./Dockerfile
+  autoDeployTrigger: commit
+version: "1"
